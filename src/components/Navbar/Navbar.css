@@ -1,0 +1,348 @@
+/* =========================
+   Google Font
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+body{
+    background:#2D142C;
+    transition:.35s;
+}
+
+/* Light Mode */
+
+body.light-mode{
+
+    background:#F6F6F6;
+}
+
+body.light-mode .navbar{
+
+    background:rgba(255,255,255,.8);
+
+}
+
+body.light-mode .logo,
+body.light-mode .nav-links a,
+body.light-mode .resume-btn{
+
+    color:#222;
+}
+
+body.light-mode .theme-btn{
+
+    color:#222;
+}
+
+/* =========================
+      NAVBAR
+========================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    background:rgba(45,20,44,.75);
+
+    backdrop-filter:blur(20px);
+
+    z-index:999;
+
+    animation:navDown .8s ease forwards;
+
+}
+
+/* =========================
+      LOGO
+========================= */
+
+.logo{
+
+    color:white;
+
+    font-size:1.9rem;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    letter-spacing:-1px;
+}
+
+.logo span{
+
+    color:#EE4540;
+}
+
+/* =========================
+      LINKS
+========================= */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    list-style:none;
+}
+
+.nav-links a{
+
+    color:#d9d9d9;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+
+    color:white;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-7px;
+
+    width:0;
+
+    height:2px;
+
+    background:#EE4540;
+
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+}
+
+.active-link{
+
+    color:#EE4540 !important;
+}
+
+.active-link::after{
+
+    width:100% !important;
+}
+
+/* =========================
+      Resume
+========================= */
+
+.resume-menu{
+
+    position:relative;
+}
+
+.resume-btn{
+
+    background:none;
+
+    border:none;
+
+    color:#d9d9d9;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.resume-btn:hover{
+
+    color:#EE4540;
+}
+
+.resume-dropdown{
+
+    position:absolute;
+
+    top:48px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:190px;
+
+    background:white;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.25);
+
+    animation:dropdown .25s ease;
+
+    z-index:9999;
+}
+
+.resume-dropdown a{
+
+    display:block;
+
+    padding:15px 18px;
+
+    color:#2D142C;
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.resume-dropdown a:hover{
+
+    background:#F5F5F5;
+
+    color:#EE4540;
+}
+
+@keyframes navDown{
+
+    from{
+
+        transform:translateY(-100px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/* =========================
+      Theme
+========================= */
+
+.theme-btn{
+
+    background:none;
+
+    border:none;
+
+    color:#FFD54A;
+
+    font-size:1.3rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.theme-btn:hover{
+
+    transform:rotate(25deg);
+
+    color:#EE4540;
+}
+
+/* =========================
+      Mobile Icon
+========================= */
+
+.mobile-toggle{
+
+    display:none;
+
+    color:white;
+
+    font-size:1.8rem;
+
+    cursor:pointer;
+}
+
+/* =========================
+      Mobile
+========================= */
+
+@media(max-width:900px){
+
+.mobile-toggle{
+
+display:block;
+
+}
+
+.nav-links{
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+background:#2D142C;
+
+display:flex;
+
+flex-direction:column;
+
+gap:28px;
+
+padding:30px 0;
+
+transform:translateY(-150%);
+
+transition:.35s;
+
+}
+
+.nav-links.active{
+
+transform:translateY(0);
+
+}
+
+}

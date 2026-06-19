@@ -1,0 +1,43 @@
+.scroll-down{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#EE4540;
+
+    font-size:1.8rem;
+
+    text-decoration:none;
+
+    animation:bounce 1.8s infinite;
+
+    transition:.3s;
+
+}
+
+.scroll-down:hover{
+
+    color:white;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,12px);
+
+    }
+
+}

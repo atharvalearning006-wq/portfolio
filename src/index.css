@@ -1,0 +1,41 @@
+:root{
+
+    --bg:#2D142C;
+    --card:#3A1838;
+    --text:#ffffff;
+    --text2:#d8d8d8;
+    --primary:#EE4540;
+    --secondary:#510A32;
+
+}
+
+body.light-mode{
+
+    --bg:#F8F8F8;
+    --card:#FFFFFF;
+    --text:#1A1A1A;
+    --text2:#555555;
+    --primary:#EE4540;
+    --secondary:#FFECEC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
